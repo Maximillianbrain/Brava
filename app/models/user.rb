@@ -36,10 +36,10 @@ class User
   #
 
   field :age,               type: Integer, default: 0
-  field :username,          type: String, default: ""
+  field :username,          type: String
   field :weight,            type: Integer, default: 0
-  field :city,              type: String, default: ""
-  field :state,             type: String, default: ""
-  field :country,           type: String, defualt: ""
+  field :city,              type: String
+  field :state,             type: String
+  field :country,           type: String
 
 end
