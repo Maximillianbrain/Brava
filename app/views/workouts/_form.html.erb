@@ -1,0 +1,31 @@
+<%= form_for @workout do |f| %>
+
+  <%= if @workout.erros any? %>
+    <div id="errors">
+      <h2> <%= pluralize(@workout.errors.count, "error") %> Prevented this workout from saving. </h2>
+      <ul>
+        <%= @workout.errors.full_messages.each do |msg| %>
+        <li> <%= msg %> </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :time_taken %> <br>
+    <%= datetime_local_field(:Workout, :time_taken) %>
+  </p>
+
+  <p>
+    <%= f.label :time %> <br>
+    <%= datetime_local_field(:Workout, :time) %>
+  </p>
+
+  <p>
+    <%= f.label :lenght %> <br>
+    <%= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
