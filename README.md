@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -27,3 +28,7 @@ Things you may want to cover:
 * For Devise, config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
      In production, :host should be set to the actual host of your application.
+=======
+# Brava
+A new take on a workout logging application
+>>>>>>> 6d892870a4b9724b91603ae54afc8b441309c758
