@@ -19,7 +19,6 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
 
-
     if @workout.save # checks if workout is valid
       redirect_to @workout
     else

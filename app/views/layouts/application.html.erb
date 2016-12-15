@@ -18,10 +18,12 @@
 
     <ul>
       <li class="category">Brava</li>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "My Profile", root_path %></li>
-      <li><%= link_to "Add Workout", new_workout_path %></li>
-      <li><%= link_to "Groups", root_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "My Profile", root_path %></li>
+        <li><%= link_to "Add Workout", new_workout_path %></li>
+        <li><%= link_to "Groups", root_path %></li>
+      <% end %>
     </ul>
 
     <% if !user_signed_in? %>
