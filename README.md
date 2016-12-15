@@ -31,4 +31,6 @@ Things you may want to cover:
 =======
 # Brava
 A new take on a workout logging application
+For more information on the progress of the web application, checkout the Trello
+https://trello.com/b/EgPAXGOJ/brava
 >>>>>>> 6d892870a4b9724b91603ae54afc8b441309c758
