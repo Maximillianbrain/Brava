@@ -9,15 +9,17 @@ class WorkoutsController < ApplicationController
   end
 
   def showall
-    @workouts = Workout.all.order('created_at DESC')
+    /@workouts = Workout.all.order('created_at DESC')/
   end
 
   def new
     @workout = Workout.new
+
   end
 
   def create
     @workout = Workout.new(post_params)
+
 
     if @workout.save # checks if workout is valid
       redirect_to @workout
@@ -40,7 +42,7 @@ class WorkoutsController < ApplicationController
   def update
     @workout = Workout.find(params[:id])
 
-    if @workout.update(params[:workout].permit(:time_taken, :time, :lenght))
+    if @workout.update(params[:workout].permit(:time_taken, :lenght))
       redirect_to @workout
     else
       render 'edit'
@@ -49,6 +51,6 @@ class WorkoutsController < ApplicationController
 
   private
   def post_params
-    params.require(:workout).permit(:time_taken, :time, :lenght)
+    params.require(:workout).permit(:time_taken, :lenght)
   end
 end

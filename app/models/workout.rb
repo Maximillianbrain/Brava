@@ -1,6 +1,7 @@
 class Workout
   include Mongoid::Document
-  field :time_taken, type: DateTime
-  field :time, type: DateTime
+
+
+  field :time_taken, type: Integer
   field :lenght, type: Integer
 end
