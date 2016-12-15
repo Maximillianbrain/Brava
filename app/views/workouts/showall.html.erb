@@ -1,2 +1,11 @@
-
+<%= @workouts.each do |workout| %>
+  <div class="workout_wrapper">
+    <h2 class="title">
+      Workout
+    </h2>
+    <p class="workout_lenght">
+      <%= link_to workout.lenght, workout %>
+    </p>
+  </div>
+<% end %>
 <div>ShowAll</div>

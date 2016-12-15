@@ -1,6 +1,7 @@
 class WorkoutsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index]
 
+
   def index
   end
 
@@ -9,7 +10,7 @@ class WorkoutsController < ApplicationController
   end
 
   def showall
-    @workouts = Workout.all.order('created_at DESC')
+    @workouts = Workout.all.order('created_at DESC') #not the best idea, CHANGE
   end
 
   def new
