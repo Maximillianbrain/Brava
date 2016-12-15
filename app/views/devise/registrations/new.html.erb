@@ -8,6 +8,27 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <div class="username">
+    <%= f.label :username %> <br />
+    <%= f.text_field :username %>
+  </div>
+
+  <div class ="age">
+    <%= f.label :age %> <br />
+    <%= f.text_field :age%>
+  </div>
+
+  <div class ="weight">
+    <%= f.label :weight %> <br />
+    <%= f.text_field :weight%>
+  </div>
+
+  <div class ="state">
+    <%= f.label :state %> <br />
+    <%= f.select :state, options_for_select(us_states),{}, class: 'form-control' %>
+  </div>
+
+
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>

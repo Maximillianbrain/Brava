@@ -47,5 +47,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mongo'
 gem 'mongoid', '~>6.0.3'
-gem 'devise'
 gem 'mongoid-tree'
+
+#For Users
+gem 'devise'
+
+

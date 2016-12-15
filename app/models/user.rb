@@ -38,8 +38,6 @@ class User
   field :age,               type: Integer, default: 0
   field :username,          type: String
   field :weight,            type: Integer, default: 0
-  field :city,              type: String
   field :state,             type: String
-  field :country,           type: String
-
+  # TODO: Add City, Country
 end
