@@ -19,8 +19,9 @@
     <ul>
       <li class="category">Brava</li>
       <% if user_signed_in? %>
+        <li><%= current_user.username %></li>
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "My Profile", root_path %></li>
+        <li><%= link_to "My Profile", profiles_path %></li>
         <li><%= link_to "Add Workout", new_workout_path %></li>
         <li><%= link_to "Groups", root_path %></li>
       <% end %>

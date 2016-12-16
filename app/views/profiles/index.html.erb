@@ -1,0 +1,13 @@
+<div class="profile_content">
+  <h1 class="profile_header">My Profile</h1>
+  <p class="profile_info">
+    My Email: <%= current_user.email %> <br>
+    My Username: <%= current_user.username %> <br>
+    My Weight: <%= current_user.weight %> <br>
+    My Age: <%= current_user.age %> <br>
+    My State: <%= current_user.state %> <br>
+  </p>
+  <li><%= link_to "Change Profile", edit_user_registration_path %></li>
+
+</div>
+

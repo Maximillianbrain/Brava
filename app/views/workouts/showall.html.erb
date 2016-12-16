@@ -1,11 +1,21 @@
 <%= @workouts.each do |workout| %>
   <div class="workout_wrapper">
-    <h2 class="title">
-      Workout
-    </h2>
-    <p class="workout_lenght">
-      <%= link_to workout.lenght, workout %>
-    </p>
+      <h2 class="title">
+        Workout
+      </h2>
+      <div class="workout_info">
+        <p class="workout_lenght">
+          Distance: <%= link_to workout.lenght, workout %> Miles
+        </p>
+        <p class="workout_time_taken">
+        Time Taken In: <%= link_to workout.time_taken, workout %> Minutes
+      </p>
+    </div>
+    <h4 class="comments">Comments</h4><!-- Add If Comments Conditional -->
+    <div class="comments_wrapper">
+
+    </div>
   </div>
 <% end %>
 <div>ShowAll</div>
+

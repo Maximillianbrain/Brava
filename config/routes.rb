@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     resources :workouts
   end
   resources :workouts
+  resources :profiles
+  get "profiles/myprofile" => "profiles#myprofile"
   root "workouts#showall"
 end
