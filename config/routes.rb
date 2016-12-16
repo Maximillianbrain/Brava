@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :workouts
   resources :profiles
   get "profiles/myprofile" => "profiles#myprofile"
-  root "workouts#showall"
+  root "workouts#showall" # Change
 end

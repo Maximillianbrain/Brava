@@ -1,7 +1,6 @@
 class WorkoutsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index]
 
-
   def index
   end
 
@@ -10,7 +9,7 @@ class WorkoutsController < ApplicationController
   end
 
   def showall
-    @workouts = Workout.all.order('created_at DESC') #not the best idea, CHANGE
+    @workouts = Workout.all.order('created_at DESC') # not the best idea, CHANGE
   end
 
   def new
@@ -19,6 +18,8 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.new(workout_params)
+    @workout.created_by_username = current_user.username
+    @workout.created_by_id = current_user.email
 
     if @workout.save # checks if workout is valid
       redirect_to @workout

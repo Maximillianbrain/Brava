@@ -1,8 +1,9 @@
 class Workout
   include Mongoid::Document
   include Mongoid::Timestamps
-  belongs_to :User
 
-  field :time_taken, type: Integer
-  field :lenght, type: Integer
+  field :time_taken,          type: Integer
+  field :lenght,              type: Integer
+  field :created_by_username, type: String
+  field :created_by_id,       type: String
 end
