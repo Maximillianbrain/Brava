@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
   def index
   end
 
-  def editProfile
+  def showuser
+    @user = User.find([params:username])
   end
 end

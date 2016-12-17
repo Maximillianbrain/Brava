@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
-  helper_method :current_user
+  helper_method :current_user # Not sure if needed
 
   def current_user=(user)
     @current_user = user

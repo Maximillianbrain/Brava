@@ -1,3 +1,18 @@
-<div class="workout_content">
-  Show
+
+<div class="workout_wrapper">
+    <div class="workout_info">
+      <p class="workout_created_by_username"> <!-- Fix!!! -->
+        <h1> <%= link_to @workout.created_by_username, profiles_showuser_path(@workout.created_by_id) %> Has Completed </h1>
+      </p>
+      <p class="workout_lenght">
+        <%= @workout.lenght %> Miles <br>
+      </p>
+      <p class="workout_time_taken">
+        Time Taken In: <%= @workout.time_taken %> Minutes <br>
+      </p>
+    </div>
+  <h4 class="comments">Comments</h4> <!-- Add If Comments Conditional -->
+  <div class="comments_wrapper">
+  </div>
 </div>
+
