@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   resources :users do
     resources :workouts
   end
+
+  resources :workouts do
+    resources :comments
+  end
+
   resources :workouts
   resources :profiles
   resources :groups
