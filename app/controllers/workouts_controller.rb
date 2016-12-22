@@ -18,7 +18,7 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.new(workout_params)
-    @workout.created_by_username = current_user.username
+    @workout.created_by_username = current_user.username # Copies These Values for later use
     @workout.created_by_id = current_user.email
 
     if @workout.save # checks if workout is valid

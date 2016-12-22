@@ -45,6 +45,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+#For the DB
 gem 'mongo'
 gem 'mongoid', '~>6.0.3'
 gem 'mongoid-tree'
@@ -52,4 +54,6 @@ gem 'mongoid-tree'
 #For Users
 gem 'devise'
 
+#Just for looks
+gem 'bootstrap', '~> 4.0.0.alpha3'
 

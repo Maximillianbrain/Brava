@@ -9,32 +9,29 @@
   </head>
 
   <body>
-  <div id="sidebar">
-    <div id="logo">
-      <%= link_to root_path do %>
-        <%= image_tag "logo.svg" %>
-      <% end %>
-    </div>
-
-    <ul>
-      <li class="category">Brava</li>
+  <nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand">
+      <div class="navbar-brand-name">
+        <%= link_to "Brava", root_path %>
+      </div>
+    </a>
+    <ul class="nav navbar-nav">
       <% if user_signed_in? %>
-        <li><%= current_user.username %></li>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "My Profile", profiles_path %></li>
-        <li><%= link_to "Add Workout", new_workout_path %></li>
-        <li><%= link_to "Groups", root_path %></li>
+        <li class="nav-item"><%= link_to "Home", root_path %> </li>
+        <li class="nav-item"><%= link_to "My Profile", profiles_path %> </li>
+        <li class="nav-item"><%= link_to "Add Workout", new_workout_path %> </li>
+        <li class="nav-item"><%= link_to "Groups", groups_path %> </li>
       <% end %>
-    </ul>
-
-    <% if !user_signed_in? %>
-      <%= link_to "Sign in", new_user_session_path%> or <%= link_to "Sign up", new_user_registration_path %>
-    <% end %>
 
     <% if user_signed_in? %>
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <li class="nav-item"> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>
     <% end %>
-  </div>
+    </ul>
+  </nav>
+
+  <% if !user_signed_in? %>
+      <%= link_to "Sign in", new_user_session_path%> or <%= link_to "Sign up", new_user_registration_path %>
+  <% end %>
     <%= yield %>
   </body>
 </html>

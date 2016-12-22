@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   end
   resources :workouts
   resources :profiles
+  resources :groups
+  resources :comments
+  resources :pages
+
   get "profiles/myprofile" => "profiles#myprofile"
   get "profiles/showuser" =>"profiles#showuser"
-  root "workouts#showall" # Change
+  root "workouts#showall"
 end
