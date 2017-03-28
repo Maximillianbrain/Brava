@@ -9,7 +9,7 @@ class WorkoutsController < ApplicationController
   end
 
   def showall
-    @workouts = Workout.all.order('created_at DESC') # not the best idea, CHANGE
+    @workouts = Workout.all.order('created_at DESC')
   end
 
   def new
