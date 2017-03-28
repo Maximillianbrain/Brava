@@ -1,4 +1,3 @@
-=======
 # Brava
 A new take on a workout logging application
 For more information on the progress of the web application, checkout the Trello.
