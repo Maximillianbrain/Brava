@@ -1,6 +1,6 @@
-<%= form_for @comment do |c| %>
+<%= form_for Comment.new do |c| %>
+  <h2>Comment: </h2>
   <p>
-    <%= c.text :text %> <br> Comment
     <%= text_field(:comment, :text) %>
   </p>
   <p>

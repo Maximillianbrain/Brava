@@ -11,9 +11,34 @@
         Time Taken In: <%= @workout.time_taken %> Minutes <br>
       </p>
     </div>
+  <h2>Comments: </h2>
+  <% if @workout.comment.exists?  %>
+      <%= @workout.comment.each do |comment| %>
+        <h6 class = "comment_user"> <%= comment.username %> said: </h6>
+        <p class="comment_content"> <%= comment.text %> </p>
+      <% end %>
+  <% else %>
+    <p>No Comments Exist</p>
+  <% end %>
 
-  <!-- <h4 class="comments">Comments</h4>
-  <div class="comments_wrapper">
-  </div> -->
+  <button class ="btn btn-outline-primary" id="wk-comment-toggler" onclick="toggleComment()">
+    Create a Comment
+  </button>
+  <div id="comment_text" style="display: none;">
+    <%= render 'comments/form' %>
+  </div>
 </div>
 
+<script>
+  function toggleComment()
+  {
+    var div = document.getElementById('comment_text');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+
+  }
+</script>
